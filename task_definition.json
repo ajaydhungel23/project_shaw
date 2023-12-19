@@ -1,15 +1,15 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:038138366395:task-definition/mytaskdefintion_1:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:038138366395:task-definition/test02:1",
     "containerDefinitions": [
         {
-            "name": "trademingle",
+            "name": "test02container",
             "image": "038138366395.dkr.ecr.us-east-1.amazonaws.com/trademingle:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "80",
-                    "containerPort": 80,
-                    "hostPort": 80,
+                    "name": "8000",
+                    "containerPort": 8000,
+                    "hostPort": 8000,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/mytaskdefintion_1",
+                    "awslogs-group": "/ecs/test02",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,7 +32,7 @@
             }
         }
     ],
-    "family": "mytaskdefintion_1",
+    "family": "test02",
     "executionRoleArn": "arn:aws:iam::038138366395:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -70,7 +70,8 @@
         "FARGATE"
     ],
     "requiresCompatibilities": [
-        "EC2"
+        "EC2",
+        "FARGATE"
     ],
     "cpu": "1024",
     "memory": "3072",
@@ -78,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-12-18T00:56:01.386Z",
+    "registeredAt": "2023-12-19T17:05:38.066Z",
     "registeredBy": "arn:aws:iam::038138366395:root",
     "tags": []
 }
