@@ -9,4 +9,6 @@ WORKDIR /work
 RUN ls
 
 EXPOSE 8000
-# RUN python3 manage.py migrate && python3 manage.py runserver
+ENTRYPOINT ["python", "manage.py"]
+CMD ["runserver", "0.0.0.0:8000"]
+#RUN python3 manage.py migrate && python3 manage.py runserver
