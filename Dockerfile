@@ -10,5 +10,5 @@ RUN ls
 
 EXPOSE 80
 ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0"]
+CMD ["runserver"]
 #RUN python3 manage.py migrate && python3 manage.py runserver
