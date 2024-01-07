@@ -1,0 +1,1 @@
+This is my security policy, no body push to prod. Push to dev and create a pull request. Lookout for security alerts in the Securit tab og your github. Also let me know if there's anything I can help with
